@@ -21,12 +21,13 @@ router.delete("/:id", (req, res) => {
 	});
 });
 
-router.put("/:id", (req, res) => {
-	req.body.ingredients = req.body.ingredients.filter(word => {return word.length > 0});
-	Question.findOneAndUpdate({_id: req.params.id}, req.body).then(() => {
-		res.redirect(`/${req.params.id}`);
-	})
-})
+router.put('/:id', (req, res) => {
+	Question.findOneAndUpdate({ _id: req.params.id }, req.body).then(
+	  question => {
+		res.redirect('/');
+	  }
+	);
+   });
 
 router.get("/new", (req, res) => {
 	res.render("new");

@@ -1,0 +1,70 @@
+body{
+    background-image: url("https://media.giphy.com/media/fw8uZriJW4TlhmZnUj/giphy.gif");
+    background-size: cover;
+    
+    
+    
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  h1{
+      display: flex;
+      justify-content: center;
+      color: #3e8e41;
+  }
+
+  div{
+    display: flex;
+    justify-content: center;
+    color: #3e8e41;
+    size: 100;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  .position{
+    margin: 0px; 
+    height: px;
+    width: 425px;
+  }
+
+  .delete{
+      display: flex;
+      justify-content: start;
+  }
+
+  .allanswers{
+      height: 50px;
+    display: flex;
+    justify-content: center;
+    color: #3e8e41;
+    size: 100;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }

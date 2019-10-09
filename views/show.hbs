@@ -1,9 +1,13 @@
 <h2><a href="/" style="color: black">{{title}}</a></h2>
 <a href="/edit/{{this.id}}"> Edit </a>
 
-<div>{{this.question}}</div>
+<div><div>{{this.question}}</div></div>
 
 
+{{#each answers}}
+<li class="allanswers">{{this}}</li>
+
+{{/each}}
 
 
 
@@ -14,5 +18,5 @@
 
 
 <form action="/{{id}}?_method=delete" method="post" style="margin-top: 30px">
-    <input type="submit" value="Delete">
+    <input class="delete" type="submit" value="Delete">
 </form>

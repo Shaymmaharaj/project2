@@ -1,0 +1,33 @@
+<form action="/{{this.id}}?_method=put" method="POST">
+    <p>
+        <label for="question">question:</label>
+        <input type="text" value="{{question}}" name="question" style="margin: 0px; height: 50px; width: 425px;">
+    </p>
+
+    <label for="answers">Answers:</label>
+    <ul class="answerField">
+        <label for="answers"></label>
+        {{#each answers}}
+        <input type="text" value="{{answers}}" name="answers" style="margin: 0px; height: 50px; width: 425px;">
+        {{/each}}
+    </ul>
+    <input class="add" type="button" value="Add Answer">
+    <input type="submit" value="Update">
+    
+    
+    
+    <script>
+        let addAnswer = document.querySelector('.add');
+        
+        function addNewAnswer() {
+            let answerField = document.querySelector('.answerField');
+            let newItem = document.createElement('li');
+            let newInput = document.createElement('input');
+            newInput.setAttribute('type', 'text');
+            newInput.setAttribute('name', 'answers');
+            newItem.appendChild(newInput);
+            answerField.appendChild(newItem);
+        }
+        addAnswer.addEventListener('click', addNewAnswer);
+    </script>
+</form>

@@ -1,9 +1,11 @@
 <h1>Questions</h1>
 
-<ul>
-    {{#each questions}}
-    <li><a href="/{{this.id}}">{{this.question}}</a></li>
-    {{/each}}
-</ul>
 
-<a href="/new">Add new question</a>
+    {{#each questions}}
+    <a class="button" href="/{{this.id}}">{{this.question}}</a>
+    {{/each}}
+
+    <script>
+        
+    </script>
+<a class="button" href="/new">Add new question</a>

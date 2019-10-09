@@ -1,0 +1,28 @@
+<h2>New question</h2>
+<h3>{{errorMessage}}</h3>
+
+
+<form action="/" method="POST">
+    <label for="question">question</label>
+    <input type="text" name="question" style="margin: 0px; height: 100px; width: 425px;">
+    <input type="submit" value="Make It">
+    <label for="answer">answer:</label>
+    <ul class="answerField">
+        <li><input type="text" name="answer" placeholder="answer here" style="margin: 0px; height: 100px; width: 425px;"></li>
+    </ul>
+    
+    <input class="add-answer" type="button" value="add answer" >
+    <script>
+       let add = document.querySelector('.add-answer');
+
+        add.addEventListener('click', function(e){
+            let answerField = document.querySelector('.answerField');
+            let newItem = document.createElement('li');
+            let newInput = document.createElement('input');
+            newInput.setAttribute('type', 'text');
+            newInput.setAttribute('name', 'answers');
+            newItem.appendChild(newInput);
+            answerField.appendChild(newItem);
+        })
+    </script>
+</form>
